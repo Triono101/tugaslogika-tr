@@ -13,5 +13,6 @@ function tugas2(str) {
     }
     return newString;
 }
-  
-console.log(tugas2("abcde"));
+
+document.write(tugas2('abcde'));
+console.log(tugas2('abcde'));
