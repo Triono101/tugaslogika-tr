@@ -1,13 +1,14 @@
-var n = "9.86-A5.321"
-var d = n.replace(/\D/g,"").split("").reverse();
+var data = "9.86-A5.321"
+var option = data.replace(/\D/g,"").split("").reverse();
 
 let string = "";
 
-function valueOutput(data, n, str) {
-    return data+Array(n-String(data).length+1).join(str||'0');
+function valueOutput(n, data, str) {
+    return n + Array(data-String(data).length + 1).join(str||'0');
 }
-for(let i=d.length-1; i>=0; i--) {
-  string += parseInt(valueOutput(d[i] , i+1))+ "\n";
+
+for(let i = option.length-1; i >= 0; i--) {
+  string += parseInt(valueOutput(option[i] , i+1))+ "\n";
 }
 
 console.log(string);
